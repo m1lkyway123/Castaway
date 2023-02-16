@@ -5,6 +5,9 @@ a {
     color: inherit;
     text-decoration: none;
 }
+img {
+    max-width: 100%;
+}
 
 body {
     font-family: 'DM Sans', sans-serif;
@@ -39,4 +42,64 @@ body {
 }
 .header__menu-link--active {
     color: #118DA8;
+}
+
+.level {
+    background-color: #191919;
+    padding: 40px 0 93px; 
+}
+.level__inner {
+    display: flex;
+    column-gap: 60px;
+    align-items: center;
+    position: relative;
+}
+.level__img {
+    border-radius: 14px;
+}
+.level__inner::before {
+    content: '';
+    position: absolute;
+    top: -26px;
+    left: -26px;
+    width: 68px;
+    height: 74px;
+    background-image: url(../images/level-img1.svg);
+    background-repeat: no-repeat;
+}
+.level__texts {
+    max-width: 526px;
+}
+.level__title {
+    font-size: 70px;
+    line-height: 88px;
+    font-weight: 400;
+    margin-bottom: 90px;
+    letter-spacing: 3.2px;
+}
+.level__level {
+    font-size: 80px;
+    font-weight: 700;
+}
+.level__next {
+    position: relative;
+    font-size: 75px;
+}
+.level__next::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 163px;
+    height: 11px;
+    background-image: url(../images/underline.svg);
+    background-repeat: no-repeat;    
+}
+.level__listen-text {
+    font-size: 15px;
+    line-height: 24px;
+    margin-bottom: 16px;
+}
+.level__listen-apps a + a {
+    margin-left: 17px;
 }
