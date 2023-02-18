@@ -178,3 +178,102 @@ body {
     background-color: #118DA8;
     border-radius: 6px;
 }
+
+.meet {
+    background-color: #191919;
+    padding-bottom: 201px;
+}
+.meet__inner {
+    display: flex;
+    justify-content: space-between;
+}
+.meet__texts {
+    margin-top: 146px;
+    max-width: 556px;
+}
+.meet__texts-img {
+    margin-bottom: 20px;
+}
+.meet__subtitle {
+    font-size: 18px;
+    line-height: 27px;
+    color: #118DA8;
+}
+.meet__title {
+    font-size: 65px;
+    font-weight: 400;
+    line-height: 79px;
+    letter-spacing: 2.88px;
+    margin-bottom: 28px;
+}
+.meet__text {
+    color: rgba(255, 255, 255, 0.7);
+}
+.meet__text + .meet__text {
+    margin-top: 33px; 
+}
+.meet__img {
+    border-radius: 14px;
+}
+
+.subscribe {
+    background-color: #191919;
+    padding-bottom: 200px;
+}
+.subscribe__inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 60px 75px;
+    background: #000000;
+    border-radius: 32px;
+    position: relative;
+}
+.subscribe__inner::after {
+    content: '';
+    width: 147px;
+    height: 91px;
+    position: absolute;
+    left: -38px;
+    top: 322px;
+    background-image: url(../images/subscribe-1.svg);
+}
+.subscribe__texts {
+    max-width: 431px;
+}
+.subscribe__subtitle {
+    font-size: 18px;
+    line-height: 27px;
+    color: #118DA8;
+}
+.subscribe__title {
+    font-size: 72px;
+    font-weight: 400;
+    line-height: 79px;
+    letter-spacing: 2.88px;
+}
+.subscribe__form-name, .subscribe__form-email {
+    display: block;
+    padding: 26px 20px 27px;
+    background: #191919;
+    border: 1px solid #191919;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 24px;
+    line-height: 28px;
+    width: 522px;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+.subscribe__form-name::placeholder, .subscribe__form-email::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+.subscribe__form-btn {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 29px;
+    color: rgba(255, 255, 255, 0.7);
+    background: #118DA8;
+    border: none;
+    border-radius: 6px;
+    padding: 9px 15px 10px 19px;
+}
