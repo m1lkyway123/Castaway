@@ -19,6 +19,9 @@ body {
     line-height: 33px;
     color: #fff;
 }
+.body.open {
+    overflow: hidden;
+}
 
 .container {
     max-width: 1340px;
@@ -29,12 +32,49 @@ body {
 
 .header {
     background-color: #191919;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 5;
 }
 .header__nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 120px;
+}
+.header__burger-btn {
+    display: none;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+    z-index: 5;
+}
+.header__burger-btn span {
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: #118DA8;
+    left: 5px;
+    transition: transform .5s, opacity .5s;
+}
+.header__burger-btn span:nth-child(1) {
+    transform: translateY(-10px);
+}
+.header__burger-btn span:nth-child(3) {
+    transform: translateY(10px);
+}
+.header.open .header__burger-btn span:nth-child(1){
+    transform: translateY(0) rotate(45deg);
+}
+.header.open .header__burger-btn span:nth-child(2){
+    opacity: 0;
+}
+.header.open .header__burger-btn span:nth-child(3){
+    transform: translateY(0) rotate(-45deg);
 }
 .header__menu {
     display: flex;
@@ -49,7 +89,7 @@ body {
 
 .level {
     background-color: #191919;
-    padding: 40px 0 93px; 
+    padding: 160px 0 93px; 
 }
 .level__inner {
     display: flex;
@@ -336,4 +376,32 @@ body {
 }
 .footer__listen-apps a + a {
     margin-left: 17px;
+}
+
+
+
+@media (max-width: 768px) {
+    .header__burger-btn {
+        display: block;
+    }
+    .header__menu {
+        position: absolute;
+        right: 0;
+        top: -100vh;
+        height: 100vh;
+        width: 100vw;
+        background-color: #000;
+        display: block;
+        padding: 25vh 20px 20px 20px;
+        transition: transform .5s;
+        font-size: 21px;
+        text-align: center;
+    }
+    .header__menu-link {
+        display: block;
+        padding: 20px 0;
+    }
+    .header.open .header__menu{
+        transform: translateY(100%);
+    }
 }
