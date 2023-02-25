@@ -381,6 +381,12 @@ body {
 
 
 
+@media (max-width: 1340px) {
+    .reviews__inner {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 1130px) {
     .level__inner {
         text-align: center;
@@ -449,6 +455,9 @@ body {
         max-width: 522px;
         padding: 15px;
     }
+    .footer__inner {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 @media (max-width: 900px) {
@@ -478,6 +487,14 @@ body {
     .subscribe {
         padding-bottom: 110px;
     }
+
+    .reviews {
+        padding-bottom: 110px;
+    }
+
+    .footer {
+        padding-bottom: 90px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -487,22 +504,25 @@ body {
     .header__menu {
         position: absolute;
         right: 0;
-        top: -100vh;
+        top: 0;
         height: 100vh;
         width: 100vw;
         background-color: #000;
         display: block;
         padding: 25vh 20px 20px 20px;
-        transition: transform .5s;
+        transition: opacity .5s;
         font-size: 21px;
         text-align: center;
+        opacity: 0;
+        pointer-events: none;
     }
     .header__menu-link {
         display: block;
         padding: 20px 0;
     }
     .header.open .header__menu{
-        transform: translateY(100%);
+        opacity: 1;
+        pointer-events: all;
     }
 
     .latest__top {
@@ -568,6 +588,41 @@ body {
         padding: 20px 15px 21px;
         font-size: 15px;
         line-height: 25px;
+    }
+
+    .reviews__item {
+        padding: 38px;
+    }
+    .reviews__item-img {
+        margin-bottom: 10px;
+    }
+    .reviews__item-text {
+        font-size: 18px;
+        line-height: 28px;
+        margin-bottom: 10px;
+    }
+    .reviews__item-author {
+        font-size: 20px;
+        line-height: 25px;
+    }
+    
+    .footer__inner {
+        display: block;
+        text-align: center;
+    }
+    .footer__logo {
+        margin-bottom: 10px;
+    }
+    .footer__logo-img {
+        margin-bottom: 5px;
+    }
+    .footer__nav {
+        font-size: 15px;
+        line-height: 20px;
+        margin-bottom: 15px;
+    }
+    .footer__nav-list + .footer__nav-list {
+        margin-top: 5px;
     }
 }
 
@@ -665,5 +720,30 @@ body {
     }
     .subscribe__form-btn {
         font-size: 13px;
+    }
+
+    .reviews {
+        padding-bottom: 50px;
+    }
+    .reviews__inner {
+        gap: 10px;
+    }
+    .reviews__item {
+        padding: 25px;
+    }
+    .reviews__item-img {
+        margin-bottom: 5px;
+    }
+    .reviews__item-text {
+        font-size: 12px;
+        line-height: 17px;
+    }
+    .reviews__item-author {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .footer {
+        padding-bottom: 40px;
     }
 }
